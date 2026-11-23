@@ -1,12 +1,4 @@
-/*
- * Forca bruta O(n^2), usada so como referencia nos testes.
- *
- * Para cada barra, estende para a direita guardando a menor altura do trecho. A area
- * do trecho [i, j] e (menor altura) * (j - i + 1).
- *
- * Com 100 mil barras sao cerca de 5 bilhoes de pares, entao nao serve para o limite do
- * problema: so para conferir a solucao O(n) com vetores pequenos.
- */
+/* Forca bruta O(n^2), so como referencia para conferir a solucao O(n). */
 
 #include "forca_bruta.h"
 

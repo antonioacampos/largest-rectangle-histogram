@@ -1,14 +1,4 @@
-/*
- * Testes da solucao O(n).
- *
- * Duas camadas:
- *   1. casos fixos, com resultado conhecido na mao (inclusive os que quebram
- *      implementacoes ingenuas: vetor crescente, decrescente, barras iguais);
- *   2. teste diferencial: 20.000 vetores aleatorios comparados contra a forca
- *      bruta. Se as duas solucoes divergirem em qualquer caso, o programa falha.
- *
- * Compilar: gcc -O2 -Wall -Wextra -std=c11 src/histograma.c src/forca_bruta.c testes/testes.c -o testes
- */
+/* Casos fixos e comparacao com a forca bruta em vetores aleatorios. */
 
 #include <stdio.h>
 #include <stdlib.h>

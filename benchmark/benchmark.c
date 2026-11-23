@@ -1,13 +1,5 @@
-/*
- * Benchmark: mostra na pratica que a solucao e linear e que a forca bruta nao
- * aguenta o limite do problema.
- *
- * Cada linha roda a funcao varias vezes ate somar pelo menos ~50 ms, e divide
- * pelo numero de execucoes. Sem isso o cronometro de Windows (resolucao de 1 ms)
- * reporta 0.000 para os casos pequenos.
- *
- * Compilar: gcc -O2 -std=c11 src/histograma.c src/forca_bruta.c benchmark/benchmark.c -o benchmark
- */
+/* Tempo das duas solucoes. Cada caso roda varias vezes e divide pelo numero de execucoes,
+ * senao o cronometro do Windows (1 ms) reporta 0.000 nos casos pequenos. */
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -18,10 +10,7 @@
 
 typedef int (*Solver)(const int *, int);
 
-/*
- * Roda f(v, n) entre 1 e maxExecucoes vezes, parando quando acumular ~50 ms.
- * Devolve o tempo medio em milissegundos e o numero de execucoes feitas.
- */
+/* Roda varias vezes ate somar ~50 ms e devolve o tempo medio. */
 static double medirMs(Solver f, const int *v, int n, int maxExecucoes, int *execucoes) {
     clock_t inicio = clock();
     int feitas = 0;
